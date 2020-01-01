@@ -17,7 +17,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 ########################################################################
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+print('project dir: ',PROJECT_DIR)
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+print('static dir: ',STATIC_ROOT)
 ########################################################################
 
 
