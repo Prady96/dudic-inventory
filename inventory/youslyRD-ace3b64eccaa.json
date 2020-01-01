@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "youslyrd",
+  "private_key_id": "ace3b64eccaa9e016f95250b8618ee0e138e8f7e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC8/tApwVO4sEL8\n9fHDE24DDeK3lbjyIXYs08EIiwlDkwVKdEL36zhrxeQKWl62OvTNc+NWprN5BHqt\nqGAW/w0bzYQlm3KMUDfuLPNVoioJPHIeNWbVxeUwjKONqkTXUf+yIjWnD70Bz7CR\nnVtEMg1kS24UBL1WRGU/ZwO8apfZ96P1QkhpODYagqr+B6AGGxHQoPoENZ4pjt3y\nI4k4rjyl4FYdZLKbFUJ9i4mVrZOPo6rtpDB3sqDWuUgYY8OUGPc1j4qLb5jQiHZn\n5Fi0yExz72LnvkTcm/rv6oka5/n5oh9iGlUUKr/DQeW2roWwz7YX5ZLzGhVYyllv\n9ijLzOTNAgMBAAECggEAAK/S25CHUZNPz1VBJl1OagNYon4MzCvQJelW3xvHbc/6\nNQ2LpfIhiIVTJhG55U4fmN1grZReJ5KJ5FktzusLjO8SXslD4kY4Wsk5oIFkFswS\nMY4Eqp/VKE5jLobGQbPKQjJ9aZYdz+IJAsVgYLhBTe7rs0Vo7AgXRhoW0NiUe2Sr\ncgiqmYBmZ3XS9DSzhYtfgJTQrgDsi6Fa0cXhxfbpMV7q577/wqB7ro/mhlOoS2rC\nbpFf86wb6pq5AJzxY9BWNgHR/zxMvH/9hin9c+1kfnuxTHdr5gdPrO+KG0/h0k1A\n9VOwvaFSUOydHeRXhWiW/eTgCZe9Q2Xp0FV9aSzlAQKBgQDmj6wysRw++fvbFemL\n8CXy6ZFffCRMQewHTERtiVG7TxaAveyhETouq670bQJWYJvf4BHvtTRPFr0mfX0n\nO3/LeVH57Y69LZRNXsa1KPpXEbyHSOmQSh2RU//XCtlsc0QqwPpX7NSnw9c6O10y\nkVI2lQ7XAaePf8rNyVVxPmm5UQKBgQDR2RcWwj+gH5WIHizH4bDx+vB/6XeDZLjX\nPKYwxFsz/gFQtWOupKuCFDLqu2oio1KeDJ30N5ATc9Kal2pTfEbQFiZRxt7L5xUU\nIIfMIeeJGQVseTg/2rF0RFQTv11Il4N4xQhEtgcECWYJH1eXbez5LkSuBL60cYfy\nKycmc8jUvQKBgGPPYJlVSMgOijQuyTrWTGdbK56tbD1C8H28S4crwiEXPMOg9JZJ\nkelwUz3nDvL7wZ7qLnmZ9TojuuC1xH8+Z7VbINzUNU26NJBF7jmwsqcMu5PJQatA\nGoq2VXPvc25ae/ESN43mrayuwDaqSk9Az9lnL9RuF+6sQMxTU1TB0xzxAoGAFli6\n57aJ1gBnCRbFiAeVsz8Yy1ZOXtSkBm+z9u+CEthSxYh7dAafKPwDrBGHLOcdji0j\nyPT9x8SGweWr8fYDCHfDXuQBp88U5I7OR0O5B1V9yV5jShF84jfAiFXRlkBkRMEe\nr0p/FsP1dLU8u6h+Gs79i1aABHEum/BSe/rKgTUCgYBfjn5PB0DFvoKb7M7O18DS\nmJ4meqTf290q/sI7p1/qfNdLWFNFNkHjsvooFNti9gam6DLXoGJFhP4JICOhED7e\nHHxUZXw/pQ1LYXGMk7KiMp7F0JnZOOITmfDdL0jY1ujjRlFWKDewj64RRTr0Irtw\nSEOqKngID6cEU1YU9Y7QSQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "dudic-inventory@youslyrd.iam.gserviceaccount.com",
+  "client_id": "113857718679610877754",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dudic-inventory%40youslyrd.iam.gserviceaccount.com"
+}
