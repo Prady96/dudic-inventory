@@ -18,8 +18,11 @@ echo "Starting $NAME as `whoami`"
 # export PYTHONPATH=$DJANGODIR:$PYTHONPATH 
 
 ## Documentation: https://stackoverflow.com/a/56742477/7999665
+## youtube link https://youtu.be/JjwbXZwOst0
 # Activate the virtual environment (virtualenv)
-echo $PWD
+
+echo "virtualenv would be activated here `$PWD`"
+# echo $PWD
 activate () {
     . $PWD/venv/bin/activate
 }
