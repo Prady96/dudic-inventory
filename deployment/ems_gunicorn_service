@@ -21,28 +21,27 @@ echo "Starting $NAME as `whoami`"
 ## youtube link https://youtu.be/JjwbXZwOst0
 # Activate the virtual environment (virtualenv)
 
-echo "virtualenv would be activated here `$DJANGODIR`"
-# echo $PWD
-activate () {
-    . $DJANGODIR/venv/bin/activate
-}
+# echo "virtualenv would be activated here `$DJANGODIR`"
+# # echo $PWD
+# activate () {
+#     . $DJANGODIR/venv/bin/activate
+# }
 
-activate
-echo "virtualenv would be activated here `$DJANGODIR/venv/bin/activate`"
+# activate
+# echo "virtualenv would be activated here `$DJANGODIR/venv/bin/activate`"
 
 
-# # Create the run directory if it doesn't exist 
-# RUNDIR=$(dirname $SOCKFILE)
-# test -d $RUNDIR || mkdir -p $RUNDIR 
+# Create the run directory if it doesn't exist 
+RUNDIR=$(dirname $SOCKFILE)
+test -d $RUNDIR || mkdir -p $RUNDIR 
   
-# # Start your Django Unicorn 
-# # Programs meant to be run under supervisor should not daemonize themselves (do not use --daemon) 
-# exec $DJANGODIR/venv/bin/gunicorn ${DJANGO_WSGI_MODULE}:application \ 
-#  --name $NAME \ 
-#  --workers $NUM_WORKERS \ 
-#  --user=$USER --group=$GROUP \ 
-#  --bind=$SOCKFILE \ 
-#  --log-level=debug \ 
-#  --log-file=- 
+# Start your Django Unicorn 
+# Programs meant to be run under supervisor should not daemonize themselves (do not use --daemon) 
+exec gunicorn ${DJANGO_WSGI_MODULE}:application \ 
+ --name $NAME \ 
+ --workers $NUM_WORKERS \ 
+ --user=$USER --group=$GROUP \ 
+ --bind=$SOCKFILE \ 
+ --log-level=debug \ 
+ --log-file=- 
 
- 
