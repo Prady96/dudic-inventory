@@ -28,6 +28,7 @@ activate () {
 }
 
 activate
+echo "virtualenv would be activated here `$DJANGODIR/venv/bin/activate`"
 
 
 # Create the run directory if it doesn't exist 
