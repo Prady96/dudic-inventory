@@ -1,7 +1,7 @@
 #!/bin/bash 
   
 NAME="dudic-inventory"                                        # Name of the application 
-DJANGODIR=/home/yously_rd/dudic-inventory                     # Django project directory 
+DJANGODIR=/home/yously_rd/dudic-inventory/                     # Django project directory 
 SOCKFILE=/home/yously_rd/dudic-inventory/run/gunicorn.sock    # we will communicte using this unix socket 
 USER=yously_rd                                                # the user to run as 
 GROUP=yously_rd                                               # the group to run as 
@@ -21,10 +21,10 @@ echo "Starting $NAME as `whoami`"
 ## youtube link https://youtu.be/JjwbXZwOst0
 # Activate the virtual environment (virtualenv)
 
-echo "virtualenv would be activated here `$PWD`"
+echo "virtualenv would be activated here `$DJANGODIR`"
 # echo $PWD
 activate () {
-    . $PWD/venv/bin/activate
+    . $DJANGODIR/venv/bin/activate
 }
 
 activate
