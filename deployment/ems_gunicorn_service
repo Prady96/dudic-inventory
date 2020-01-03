@@ -14,14 +14,13 @@ echo "Starting $NAME as `whoami`"
 # Activate the virtual environment 
 # cd $DJANGODIR 
 # Source ../venv/bin/activate
-# export DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE 
-# export PYTHONPATH=$DJANGODIR:$PYTHONPATH 
+
 
 ## Documentation: https://stackoverflow.com/a/56742477/7999665
 ## youtube link https://youtu.be/JjwbXZwOst0
 # Activate the virtual environment (virtualenv)
 
-# echo "virtualenv would be activated here `$DJANGODIR`"
+echo "virtualenv would be activated here `$DJANGODIR`"
 # # echo $PWD
 # activate () {
 #     . $DJANGODIR/venv/bin/activate
@@ -29,7 +28,8 @@ echo "Starting $NAME as `whoami`"
 
 # activate
 # echo "virtualenv would be activated here `$DJANGODIR/venv/bin/activate`"
-
+export DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE 
+export PYTHONPATH=$DJANGODIR:$PYTHONPATH 
 
 # Create the run directory if it doesn't exist 
 RUNDIR=$(dirname $SOCKFILE)
