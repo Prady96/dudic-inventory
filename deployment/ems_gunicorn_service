@@ -20,12 +20,12 @@ echo "Starting $NAME as `whoami`"
 ## youtube link https://youtu.be/JjwbXZwOst0
 # Activate the virtual environment (virtualenv)
 
-echo "virtualenv would be activated here `$DJANGODIR`"
-activate () {
-    . $DJANGODIR/venv/bin/activate
-}
+# echo "virtualenv would be activated here `$DJANGODIR`"
+# activate () {
+#     . $DJANGODIR/venv/bin/activate
+# }
 
-activate
+# activate
 # echo "virtualenv would be activated here `$DJANGODIR/venv/bin/activate`"
 export DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE 
 export PYTHONPATH=$DJANGODIR:$PYTHONPATH 
