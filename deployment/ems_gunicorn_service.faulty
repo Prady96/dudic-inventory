@@ -43,7 +43,3 @@ exec $DJANGODIR/venv/bin/gunicorn ${DJANGO_WSGI_MODULE}:application \
  --bind=$SOCKFILE \ 
  --log-level=debug \ 
  --log-file=- 
-
-
-
-

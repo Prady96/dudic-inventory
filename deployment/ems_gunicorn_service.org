@@ -21,13 +21,15 @@ echo "Starting $NAME as `whoami`"
 ## youtube link https://youtu.be/JjwbXZwOst0
 # Activate the virtual environment (virtualenv)
 
-echo "virtualenv would be activated here `$PWD`"
+##echo "virtualenv would be activated here `$DJANGODIR`"
 # echo $PWD
-activate () {
-    . $PWD/venv/bin/activate
-}
+##activate () {
+##    . $DJANGODIR/venv/bin/activate
+##}
 
-activate
+##activate
+
+##echo "virtualenv would be activated here `$DJANGODIR/venv/bin/activate`"
 
 
 # Create the run directory if it doesn't exist 
@@ -43,7 +45,3 @@ exec $DJANGODIR/venv/bin/gunicorn ${DJANGO_WSGI_MODULE}:application \
  --bind=$SOCKFILE \ 
  --log-level=debug \ 
  --log-file=- 
-
-
-
-
