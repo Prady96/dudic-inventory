@@ -8,8 +8,7 @@ After=network.target
 User=yously_rd
 Group=yously_rd
 WorkingDirectory=/home/yously_rd/dudic-inventory/
-ExecStart=gunicorn -- 
-access-logfile - --workers 3 --bind unix:/home/yously_rd/dudic-inventory/run/gunicorn.sock inventory.wsgi:application
+ExecStart=/home/yously_rd/dudic-inventory/venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/yously_rd/dudic-inventory/run/gunicorn.sock inventory.wsgi:application
 
 [Install]
 WantedBy=multi-user.target
