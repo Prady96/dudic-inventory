@@ -39,7 +39,7 @@ SECRET_KEY = '5@_^m^ufo^wjwf&dlb)cfb(qpepx7-n42fsggv+s=0zvp7io99'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost','www.dudic.in', '*','127.0.1.1','admin.dudic.io',]
+ALLOWED_HOSTS = ['127.0.0.1','localhost','*','admin.dudic.io',]
 
 
 # Application definition
