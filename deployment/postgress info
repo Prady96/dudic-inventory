@@ -34,7 +34,28 @@ GRANT ALL PRIVILEGES ON DATABASE inventoryProject TO prady;
 
 
 
-
+yously_rd@inventory-server:~/dudic-inventory$ sudo su - postgres
+postgres@inventory-server:~$ psql
+psql (9.5.19)
+Type "help" for help.
+postgres=# REATE DATABASE InventoryMangment;
+ERROR:  syntax error at or near "REATE"
+LINE 1: REATE DATABASE InventoryMangment;
+        ^
+postgres=# CREATE DATABASE InventoryMangment;
+CREATE DATABASE
+postgres=# CREATE USER prady WITH PASSWORD 'harebol@123';
+ERROR:  role "prady" already exists
+postgres=# ALTER ROLE prady SET client_encoding TO 'utf8';
+ALTER ROLE
+postgres=# ALTER ROLE prady SET default_transaction_isolation TO 'read committed';
+ALTER ROLE
+postgres=# ALTER ROLE prady SET timezone TO 'Asia/Kolkata';
+ALTER ROLE
+postgres=# GRANT ALL PRIVILEGES ON DATABASE InventoryMangment TO prady;
+GRANT
+postgres=# \q
+postgres@inventory-server:~$ exit
 
 
 
