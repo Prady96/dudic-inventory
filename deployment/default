@@ -1,6 +1,7 @@
 server {
 	listen 80;
-	server_name admin.dudic.com
+	server_name admin.dudic.com;
+	client_max_body_size 100M;
 
 	access_log /home/yously_rd/dudic-inventory/logs/nginx-access.log;
 	error_log /home/yously_rd/dudic-inventory/logs/nginx-error.log;

@@ -30,8 +30,8 @@ class InventoryPresent(models.Model):
     category  = models.ForeignKey(Categorie, null=True ,on_delete=models.SET_NULL)
 
     picture   = models.ImageField(null=True, 
-                            upload_to='inventory_thumbnails/',
-                            blank = True,)
+                                  upload_to='inventory_thumbnails/',
+                                  blank = True,)
 
     ## size is "width x height"
     cropping = ImageRatioField('picture', '300x300')

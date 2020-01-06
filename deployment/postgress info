@@ -1,0 +1,76 @@
+### Documentation link for postgress
+
+https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-14-04
+
+https://stackoverflow.com/a/27351341/7999665
+https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+
+
+yously_rd@inventory-server:~$ sudo su - postgres
+postgres@inventory-server:~$ psql
+
+postgres=# CREATE DATABASE inventoryProject;
+CREATE DATABASE
+
+postgres=# CREATE USER prady WITH PASSWORD 'harebol@123';
+CREATE ROLE
+
+postgres=# ALTER ROLE prady SET client_encoding TO 'utf8';
+ALTER ROLE
+
+postgres=# ALTER ROLE prady SET default_transaction_isolation TO 'read committed';
+ALTER ROLE
+
+postgres=# ALTER ROLE prady SET timezone TO 'Asia/Kolkata';
+ALTER ROLE
+
+GRANT ALL PRIVILEGES ON DATABASE inventoryProject TO prady;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##
