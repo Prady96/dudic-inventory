@@ -1,24 +1,18 @@
-
-##upstream inventory {
-	
-##	server unix:/home/yously_rd/dudic-inventory/run/gunicorn.sock fail_timeout=0
-
-##}
-
 server {
-	listen 80 default_server;
+	listen 80;
 	server_name admin.dudic.com
 
 	access_log /home/yously_rd/dudic-inventory/logs/nginx-access.log;
 	error_log /home/yously_rd/dudic-inventory/logs/nginx-error.log;
 
 	location /static/ {
-		root	/home/yously_rd/dudic-inventory/;
+		alias	/home/yously_rd/dudic-inventory/inventory/static/;
+##		alias	/home/yously_rd/dudic-inventory/inventory/static/admin;
 	}
 
 	location / {
 		include proxy_params;
-		proxy_pass http://unix:/home/yously_rd/dudic-inventory/run/gunicorn.sock
+		proxy_pass http://unix:/home/yously_rd/dudic-inventory/run/gunicorn.sock;
 	}
 
 }
