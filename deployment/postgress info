@@ -32,6 +32,13 @@ GRANT ALL PRIVILEGES ON DATABASE inventoryProject TO prady;
 
 
 
+https://stackoverflow.com/a/4313625/7999665
+
+psql
+ALTER DATABASE inventorymangment OWNER TO prady;
+\q
+psql -l
+
 
 
 yously_rd@inventory-server:~/dudic-inventory$ sudo su - postgres
