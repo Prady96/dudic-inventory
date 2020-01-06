@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users',
     'phone_field',
+    'rest_framework',
     'image_cropping',
     'easy_thumbnails',
 ]
