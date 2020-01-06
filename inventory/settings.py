@@ -37,7 +37,7 @@ print('static dir: ',STATIC_ROOT)
 SECRET_KEY = '5@_^m^ufo^wjwf&dlb)cfb(qpepx7-n42fsggv+s=0zvp7io99'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1','localhost','www.dudic.in', '*','127.0.1.1','admin.dudic.io',]
 
