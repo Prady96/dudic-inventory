@@ -39,7 +39,7 @@ SECRET_KEY = '5@_^m^ufo^wjwf&dlb)cfb(qpepx7-n42fsggv+s=0zvp7io99'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['35.238.235.72',]
+ALLOWED_HOSTS = ['*',]
 
 
 # Application definition
@@ -163,11 +163,6 @@ THUMBNAIL_PROCESSORS = (
 ) + thumbnail_settings.THUMBNAIL_PROCESSORS
 
  ##############################  ##############################  ####
-
-
-
-
-
 
 
 
