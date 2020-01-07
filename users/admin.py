@@ -33,7 +33,7 @@ class PresentAdmin(admin.ModelAdmin, ImageCroppingMixin):
 	)
 
 	ordering = ['item_name','category']
-	list_display = ['item_name', 'quantity','brand']
+	list_display = ['item_name', 'quantity','brand', 'storage_picture']
 	list_editable = ['quantity']
 	list_filter = ['category']
 	search_fields = ['item_name']
