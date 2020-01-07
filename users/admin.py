@@ -24,7 +24,7 @@ class RoleOfUserAdmin(admin.ModelAdmin):
 @admin.register(InventoryPresent)
 class PresentAdmin(admin.ModelAdmin, ImageCroppingMixin):
 
-	readonly_fields = ['user','storage_picture',]
+	readonly_fields = ['user',]
 
 	fields = (
 		('item_name', 'quantity'),
@@ -33,7 +33,7 @@ class PresentAdmin(admin.ModelAdmin, ImageCroppingMixin):
 	)
 
 	ordering = ['item_name','category']
-	list_display = ['item_name', 'quantity', 'storage_picture', 'brand']
+	list_display = ['item_name', 'quantity','brand']
 	list_editable = ['quantity']
 	list_filter = ['category']
 	search_fields = ['item_name']
