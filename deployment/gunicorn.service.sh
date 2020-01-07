@@ -14,7 +14,9 @@ ExecStart=/home/yously_rd/dudic-inventory/venv/bin/gunicorn --access-logfile - -
 WantedBy=multi-user.target
 
 
-
+###
+# /etc/systemd/system/gunicorn.service
+###
 
 
 
