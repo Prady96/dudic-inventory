@@ -4,7 +4,7 @@ from django.contrib.auth.models import PermissionsMixin
 from django.conf import settings
 from phone_field import PhoneField
 from django.contrib.auth.models import BaseUserManager
-from image_cropping import ImageRatioField
+# from image_cropping import ImageRatioField
 from smart_selects.db_fields import ChainedForeignKey 
 
 
