@@ -9,8 +9,8 @@ from smart_selects.db_fields import ChainedForeignKey
 from inventory import settings
 
 ## default sample image
-sample_image = 'images/sample_image.png'
-print(sample_image)
+print('my static root is here ',settings.STATIC_ROOT)
+path = settings.STATIC_ROOT + '/admin/img/sample_image.svg'
 
 class RoleOfUser(models.Model):
     name = models.CharField(max_length = 50, default = 'null')
@@ -36,7 +36,7 @@ class InventoryPresent(models.Model):
     picture   = models.ImageField(  null=True,
                                     blank = True,
                                     upload_to='inventory_thumbnails/',
-                                    default = sample_image)
+                                    default = path)
     # print(sample_image)
 
     ## size is "width x height"
