@@ -51,16 +51,17 @@ class PresentAdmin(admin.ModelAdmin, ImageCroppingMixin):
 @admin.register(InventoryIssued)
 class IssuedAdmin(admin.ModelAdmin):
 
-	list_display = ['get_users','get_user_type']
-	list_filter = ['get_user_type',]
-	ordering = ['get_user_type',]
+	list_display = ['user_type',]
+	list_filter = ['user_type',]
+	ordering = ['user_type',]
 	search_fields = ['get_users', 'item_name__item_name']
 	readonly_fields = ['user',]
 	save_as = True
-	filter_horizontal = ('item_name',)
+	filter_horizontal = ('item_name','get_users',)
 
 	fields = (
-		('get_user_type','get_users'),
+		('name',),
+		('user_type','get_users'),
 		('item_name', 'quantity'),
 		('item_status','user')
 	)

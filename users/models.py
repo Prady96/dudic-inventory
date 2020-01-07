@@ -52,14 +52,18 @@ class InventoryPresent(models.Model):
 class InventoryIssued(models.Model):
     """Inventory Issued to peron """
 
-    get_user_type = models.ForeignKey(RoleOfUser, on_delete=models.CASCADE)
+    user_type = models.ForeignKey(RoleOfUser, on_delete=models.CASCADE)
+
+    name = models.CharField(max_length = 30, default = 'Related_name')
 
     user          = models.ForeignKey(settings.AUTH_USER_MODEL,
                                      null=True, blank=True,
                                      on_delete=models.SET_NULL,
                                      )
 
-    get_users     = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name = 'issued')
+    # get_users     = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name = 'issued')
+
+    get_users     = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name = 'issued')
 
     item_name     = models.ManyToManyField(InventoryPresent)
     date          = models.DateField(auto_now_add = True)
