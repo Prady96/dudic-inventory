@@ -5,8 +5,12 @@ from django.conf import settings
 from phone_field import PhoneField
 from django.contrib.auth.models import BaseUserManager
 # from image_cropping import ImageRatioField
-from smart_selects.db_fields import ChainedForeignKey 
+from smart_selects.db_fields import ChainedForeignKey
+from inventory import settings
 
+## default sample image
+sample_image = 'images/sample_image.png'
+print(sample_image)
 
 class RoleOfUser(models.Model):
     name = models.CharField(max_length = 50, default = 'null')
@@ -32,7 +36,8 @@ class InventoryPresent(models.Model):
     picture   = models.ImageField(  null=True,
                                     blank = True,
                                     upload_to='inventory_thumbnails/',
-                                    default = 'images/sample_image.png')
+                                    default = sample_image)
+    # print(sample_image)
 
     ## size is "width x height"
     # cropping = ImageRatioField('picture', '300x300')
