@@ -24,31 +24,6 @@ class Categorie(models.Model):
     def __str__(self):
         return self.name
 
-class InventoryPresent(models.Model):
-    """Inventory Present in the Store """
-    quantity  = models.IntegerField(default='1')
-    user      = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
-    item_name = models.CharField(max_length = 30)
-    date      = models.DateField(auto_now_add = True)
-    brand     = models.CharField(max_length = 30)
-    category  = models.ForeignKey(Categorie, null=True ,on_delete=models.SET_NULL)
-
-    picture   = models.ImageField(  null=True,
-                                    blank = True,
-                                    upload_to='inventory_thumbnails/',
-                                    default = path)
-    # print(sample_image)
-
-    ## size is "width x height"
-    # cropping = ImageRatioField('picture', '300x300')
-
-    def __str__(self):
-        return self.item_name
-
-    class Meta:
-        verbose_name_plural = 'Inventory Present'
-
-
 class InventoryIssued(models.Model):
     """Inventory Issued to peron """
 
@@ -62,12 +37,10 @@ class InventoryIssued(models.Model):
                                      )
 
     # get_users     = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name = 'issued')
-
     get_users     = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name = 'issued')
 
-    item_name     = models.ManyToManyField(InventoryPresent)
+
     date          = models.DateField(auto_now_add = True)
-    quantity      = models.IntegerField(default = '1')
 
     status        = [("APP","Approved"),
                     ("DEC","Declined"),]
@@ -79,6 +52,29 @@ class InventoryIssued(models.Model):
 
     class Meta:
         verbose_name_plural = 'Inventory Issued'
+
+
+class InventoryPresent(models.Model):
+    """Inventory Present in the Store """
+    quantity  = models.IntegerField(default='1')
+    user      = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
+    item_name = models.CharField(max_length = 30)
+    date      = models.DateField(auto_now_add = True)
+    brand     = models.CharField(max_length = 30)
+    category  = models.ForeignKey(Categorie, null=True ,on_delete=models.SET_NULL)
+
+    picture   = models.ImageField(  null=True,
+                                    blank = True,
+                                    upload_to='inventory_thumbnails/',
+                                    default = path)
+    
+    issued_to = models.ForeignKey(InventoryIssued, on_delete=models.SET_NULL, null=True)
+
+    def __str__(self):
+        return self.item_name
+
+    class Meta:
+        verbose_name_plural = 'Inventory Present'
 
 
 class User_manager(BaseUserManager):
