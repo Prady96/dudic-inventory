@@ -100,7 +100,7 @@ class InventoryPresent(models.Model):
     user      = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
     item_name = models.ForeignKey(Items, on_delete=models.PROTECT)
     date      = models.DateField(auto_now_add = True)
-    brand     = models.CharField(max_length = 30)
+    brand     = models.CharField(max_length = 30, null=True, blank =True)
     category  = models.ForeignKey(Categorie, null=True ,on_delete=models.SET_NULL)
 
     picture   = models.ImageField(  null=True,
