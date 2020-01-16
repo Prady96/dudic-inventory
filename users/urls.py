@@ -1,16 +1,17 @@
 from django.urls import path, include
 
 from rest_framework.routers import DefaultRouter
-
+from django.conf.urls import url
+from .admin import SendUserEmails
 
 router = DefaultRouter()
 
-# router.register('country', views.CountryView)
+
 
 
 urlpatterns = [
     path('', include(router.urls)),
-    # path('UserLogin/', views.UserLoginApiView.as_view()),
+    url(r'^email-users/$',view=SendUserEmails.as_view(),name='email'),
 
 ]
 
