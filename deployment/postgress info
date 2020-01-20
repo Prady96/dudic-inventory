@@ -65,7 +65,13 @@ postgres=# \q
 postgres@inventory-server:~$ exit
 
 
+Installation for POSTGIS
+https://postgis.net/install/
 
+SuperUser Flag for PostGIS
+ALTER ROLE <user_name> SUPERUSER;
+
+https://stackoverflow.com/a/16528062/7999665
 
 
 
