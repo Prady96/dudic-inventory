@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'image_cropping',
     'easy_thumbnails',
+    'sslserver',
 ]
 
 MIDDLEWARE = [
